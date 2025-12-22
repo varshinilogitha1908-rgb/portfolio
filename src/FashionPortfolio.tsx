@@ -349,7 +349,7 @@ const FashionPortfolio = () => {
                 value={formData.message}
                 onChange={handleInputChange}
                 placeholder="Your Message"
-                rows="5"
+                rows={5}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
               ></textarea>
               <button 
