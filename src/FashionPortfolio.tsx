@@ -91,7 +91,7 @@ const FashionPortfolio = () => {
    * Smooth scroll to section
    * @param {string} id - The section ID to scroll to
    */
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -103,7 +103,7 @@ const FashionPortfolio = () => {
    * Handle form input changes
    * @param {Event} e - Input change event
    */
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -115,7 +115,7 @@ const FashionPortfolio = () => {
    * Handle form submission
    * @param {Event} e - Form submit event
    */
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:  React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     // In a real application, you would send this data to a server
     console.log('Form submitted:', formData);
