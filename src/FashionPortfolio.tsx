@@ -48,17 +48,10 @@ const portfolioItems = [
   },
   {
     id: 5,
-    title: 'Festive Glamour',
-    category: 'Occasion Wear',
+    title: '',
+    category: 'JADE',
     image: 'https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=800&h=1000&fit=crop',
-    description: 'Statement pieces for special occasions'
-  },
-  {
-    id: 6,
-    title: 'Artisan Craft',
-    category: 'Handcrafted',
-    image: 'https://images.unsplash.com/photo-1617019114583-affb34d1b3cd?w=800&h=1000&fit=crop',
-    description: 'Handcrafted with love and precision'
+    description: 'Hospitality Draped in Heritage'
   }
 ];
 
@@ -209,7 +202,7 @@ const FashionPortfolio = () => {
       <section id="portfolio" className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-serif text-center mb-4 text-gray-900">
-            Portfolio
+            Design Portfolio
           </h2>
           
           {/* Category Filter */}
