@@ -137,8 +137,11 @@ const FashionPortfolio = () => {
               <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-gray-900 transition">
                 Home
               </button>
-              <button onClick={() => scrollToSection('portfolio')} className="text-gray-700 hover:text-gray-900 transition">
-                Portfolio
+              <button onClick={() => scrollToSection('dportfolio')} className="text-gray-700 hover:text-gray-900 transition">
+                Design Portfolio
+              </button>
+              <button onClick={() => scrollToSection('tportfolio')} className="text-gray-700 hover:text-gray-900 transition">
+                Technical Portfolio
               </button>
               <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-gray-900 transition">
                 About
@@ -165,8 +168,11 @@ const FashionPortfolio = () => {
               <button onClick={() => scrollToSection('home')} className="block w-full text-left py-2 text-gray-700">
                 Home
               </button>
-              <button onClick={() => scrollToSection('portfolio')} className="block w-full text-left py-2 text-gray-700">
-                Portfolio
+              <button onClick={() => scrollToSection('dportfolio')} className="block w-full text-left py-2 text-gray-700">
+                Design Portfolio
+              </button>
+              <button onClick={() => scrollToSection('tportfolio')} className="block w-full text-left py-2 text-gray-700">
+                Technical Portfolio
               </button>
               <button onClick={() => scrollToSection('about')} className="block w-full text-left py-2 text-gray-700">
                 About
@@ -189,7 +195,7 @@ const FashionPortfolio = () => {
             Timeless fashion with contemporary vision
           </p>
           <button 
-            onClick={() => scrollToSection('portfolio')}
+            onClick={() => scrollToSection('dportfolio')}
             className="bg-gray-900 text-white px-8 py-3 rounded-full hover:bg-gray-800 transition inline-flex items-center gap-2"
           >
             Explore Collections
@@ -198,8 +204,8 @@ const FashionPortfolio = () => {
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 px-4 bg-white">
+      {/* Design Portfolio Section */}
+      <section id="dportfolio" className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-serif text-center mb-4 text-gray-900">
             Design Portfolio
@@ -223,6 +229,57 @@ const FashionPortfolio = () => {
           </div>
           
           {/* Portfolio Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredItems.map(item => (
+              <div 
+                key={item.id}
+                className="group cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300"
+              >
+                <div className="relative overflow-hidden aspect-[4/5]">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                    <div className="p-6 text-white">
+                      <p className="text-sm uppercase tracking-wider mb-2">{item.category}</p>
+                      <h3 className="text-2xl font-serif mb-2">{item.title}</h3>
+                      <p className="text-sm text-gray-200">{item.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technical Portfolio Section */}
+      <section id="tportfolio" className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-serif text-center mb-4 text-gray-900">
+            Technical Portfolio
+          </h2>
+          
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {categories.map(category => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-2 rounded-full transition ${
+                  selectedCategory === category
+                    ? 'bg-gray-900 text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+          
+          {/* Technical Portfolio Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredItems.map(item => (
               <div 
