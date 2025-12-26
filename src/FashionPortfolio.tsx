@@ -55,14 +55,13 @@ const portfolioItems = [
   }
 ];
 
-const technicalPortfolio = [
+const technicalPortfolio =
   {
     title: '',
     pdfUrl: 'https://drive.google.com/file/d/1tfO5plhkAZr_IqfeFhzPtjbSUmW1qax5/view?usp=drive_link',
     description: 'View my complete technical work and projects',
     thumbnailImage: 'Your_thumbnail_image'
-  }
-];
+  };
 
 const FashionPortfolio = () => {
   // State for mobile menu toggle
@@ -271,7 +270,7 @@ const FashionPortfolio = () => {
             Technical Portfolio
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            {technicalPortfolio.description}
+            {x.description}
           </p>
           
           {/* Portfolio Card */}
