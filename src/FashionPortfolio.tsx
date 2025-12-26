@@ -20,29 +20,29 @@ import { Menu, X, Instagram, Mail, Phone, ChevronRight } from 'lucide-react';
 const portfolioItems = [
   {
     id: 1,
-    title: 'Mangala Malar',
-    category: '',
+    title: '',
+    category: 'Mangala Malar',
     image: 'https://www.pinterest.com/ideas/maa-mangala-photo/911242736734/',
     description: 'Divinity Woven for Today'
   },
   {
     id: 2,
-    title: 'Handcrafted Narratives',
-    category: '',
+    title: '',
+    category: 'Handcrafted Narratives',
     image: 'https://okhai.org/collections/artisanal-clothing-handcrafted-designer-women-dresses-online',
     description: 'An Indian Dialogue with Wedgewood'
   },
   {
     id: 3,
-    title: 'Theera Kadhal',
-    category: '',
+    title: '',
+    category: 'Theera Kadhal',
     image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&h=1000&fit=crop',
     description: 'An Infinite Bond Beautifully Worn'
   },
   {
     id: 4,
-    title: 'Thari',
-    category: '',
+    title: '',
+    category: 'Thari',
     image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=1000&fit=crop',
     description: 'Crafted in tradition designed for Today'
   },
