@@ -55,6 +55,17 @@ const portfolioItems = [
   }
 ];
 
+const techportfolioItems = [
+  {
+    id: 1,
+    title: '',
+    category: 'Technical Portfolio',
+    pdfUrl: 'https://drive.google.com/file/d/1tfO5plhkAZr_IqfeFhzPtjbSUmW1qax5/view?usp=drive_link',
+    description: 'View my complete technical work and projects',
+    thumbnailImage: 'Your_thumbnail_image'
+  }
+];
+
 const FashionPortfolio = () => {
   // State for mobile menu toggle
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -256,52 +267,57 @@ const FashionPortfolio = () => {
       </section>
 
       {/* Technical Portfolio Section */}
-      <section id="tportfolio" className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section id="tportfolio" className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-serif text-center mb-4 text-gray-900">
             Technical Portfolio
           </h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            {technicalPortfolio.description}
+          </p>
           
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map(category => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full transition ${
-                  selectedCategory === category
-                    ? 'bg-gray-900 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-          
-          {/* Technical Portfolio Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredItems.map(item => (
-              <div 
-                key={item.id}
-                className="group cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300"
-              >
-                <div className="relative overflow-hidden aspect-[4/5]">
-                  <img 
-                    src={item.image} 
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                    <div className="p-6 text-white">
-                      <p className="text-sm uppercase tracking-wider mb-2">{item.category}</p>
-                      <h3 className="text-2xl font-serif mb-2">{item.title}</h3>
-                      <p className="text-sm text-gray-200">{item.description}</p>
-                    </div>
-                  </div>
-                </div>
+          {/* Portfolio Card */}
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-shadow duration-300">
+            <div className="relative group">
+              {/* Thumbnail Image */}
+              <div className="aspect-[16/10] overflow-hidden">
+                <img 
+                  src={technicalPortfolio.thumbnailImage} 
+                  alt={technicalPortfolio.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
-            ))}
+              
+              {/* Overlay with View Button */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <a 
+                  href={technicalPortfolio.pdfUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105"
+                >
+                  View Portfolio
+                </a>
+              </div>
+            </div>
+            
+            {/* Card Content */}
+            <div className="p-8">
+              <h3 className="text-2xl font-serif mb-4 text-gray-900">
+                {technicalPortfolio.title}
+              </h3>
+              <p className="text-gray-600 mb-6">
+                Click to view my complete technical portfolio including projects, skills, and achievements.
+              </p>
+              <a 
+                href={technicalPortfolio.pdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition"
+              >
+                Open PDF →
+              </a>
+            </div>
           </div>
         </div>
       </section>
