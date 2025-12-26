@@ -270,7 +270,7 @@ const FashionPortfolio = () => {
             Technical Portfolio
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            {x.description}
+            {technicalPortfolio.description}
           </p>
           
           {/* Portfolio Card */}
