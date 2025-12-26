@@ -55,7 +55,7 @@ const portfolioItems = [
   }
 ];
 
-const techportfolioItems = [
+const technicalPortfolio = [
   {
     id: 1,
     title: '',
