@@ -57,9 +57,7 @@ const portfolioItems = [
 
 const technicalPortfolio = [
   {
-    id: 1,
     title: '',
-    category: 'Technical Portfolio',
     pdfUrl: 'https://drive.google.com/file/d/1tfO5plhkAZr_IqfeFhzPtjbSUmW1qax5/view?usp=drive_link',
     description: 'View my complete technical work and projects',
     thumbnailImage: 'Your_thumbnail_image'
