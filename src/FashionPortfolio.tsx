@@ -20,31 +20,31 @@ import { Menu, X, Instagram, Mail, Phone, ChevronRight } from 'lucide-react';
 const portfolioItems = [
   {
     id: 1,
-    title: 'Bridal Collection 2024',
-    category: 'Bridal',
-    image: 'https://images.unsplash.com/photo-1594552072238-4686b70f7f89?w=800&h=1000&fit=crop',
-    description: 'Elegant bridal wear with traditional craftsmanship'
+    title: 'Mangala Malar',
+    category: '',
+    image: 'https://www.pinterest.com/ideas/maa-mangala-photo/911242736734/',
+    description: 'Divinity Woven for Today'
   },
   {
     id: 2,
-    title: 'Summer Elegance',
-    category: 'Ready-to-Wear',
-    image: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=800&h=1000&fit=crop',
-    description: 'Contemporary summer collection'
+    title: 'Handcrafted Narratives',
+    category: '',
+    image: 'https://okhai.org/collections/artisanal-clothing-handcrafted-designer-women-dresses-online',
+    description: 'An Indian Dialogue with Wedgewood'
   },
   {
     id: 3,
-    title: 'Heritage Textiles',
-    category: 'Couture',
+    title: 'Theera Kadhal',
+    category: '',
     image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&h=1000&fit=crop',
-    description: 'Traditional textiles reimagined'
+    description: 'An Infinite Bond Beautifully Worn'
   },
   {
     id: 4,
-    title: 'Modern Minimalism',
-    category: 'Contemporary',
+    title: 'Thari',
+    category: '',
     image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=1000&fit=crop',
-    description: 'Clean lines and sophisticated silhouettes'
+    description: 'Crafted in tradition designed for Today'
   },
   {
     id: 5,
@@ -136,7 +136,7 @@ const FashionPortfolio = () => {
           <div className="flex justify-between items-center h-16">
             {/* Logo/Brand Name */}
             <div className="text-2xl font-serif tracking-wider text-gray-900">
-              DESIGNER NAME
+              LOGITHA VARSHINI RAMESH
             </div>
             
             {/* Desktop Navigation */}
@@ -211,9 +211,6 @@ const FashionPortfolio = () => {
           <h2 className="text-4xl md:text-5xl font-serif text-center mb-4 text-gray-900">
             Portfolio
           </h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            A curated selection of our finest creations, showcasing craftsmanship and design excellence
-          </p>
           
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
