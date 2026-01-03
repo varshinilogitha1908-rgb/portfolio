@@ -22,35 +22,35 @@ const portfolioItems = [
     id: 1,
     title: '',
     category: 'Mangala Malar',
-    image: 'https://www.pinterest.com/ideas/maa-mangala-photo/911242736734/',
+    image: 'Mangala malar.jpg',
     description: 'Divinity Woven for Today'
   },
   {
     id: 2,
     title: '',
     category: 'Handcrafted Narratives',
-    image: 'https://okhai.org/collections/artisanal-clothing-handcrafted-designer-women-dresses-online',
+    image: 'Handcrafted narratives .jpg',
     description: 'An Indian Dialogue with Wedgewood'
   },
   {
     id: 3,
     title: '',
     category: 'Theera Kadhal',
-    image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&h=1000&fit=crop',
+    image: 'Theera kadhal.jpg',
     description: 'An Infinite Bond Beautifully Worn'
   },
   {
     id: 4,
     title: '',
     category: 'Thari',
-    image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=1000&fit=crop',
+    image: 'Thari.jpg',
     description: 'Crafted in tradition designed for Today'
   },
   {
     id: 5,
     title: '',
     category: 'JADE',
-    image: 'https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=800&h=1000&fit=crop',
+    image: 'Jade.jpg',
     description: 'Hospitality Draped in Heritage'
   }
 ];
@@ -58,9 +58,9 @@ const portfolioItems = [
 const technicalPortfolio =
   {
     title: '',
-    pdfUrl: 'https://drive.google.com/file/d/1tfO5plhkAZr_IqfeFhzPtjbSUmW1qax5/view?usp=drive_link',
+    pdfUrl: 'Technical Portfolio.pdf',
     description: 'View my complete technical work and projects',
-    thumbnailImage: 'Your_thumbnail_image'
+    thumbnailImage: 'Tech.jpg'
   };
 
 const FashionPortfolio = () => {
