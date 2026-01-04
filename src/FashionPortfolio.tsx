@@ -343,9 +343,6 @@ const FashionPortfolio = () => {
               <h3 className="text-2xl font-serif mb-4 text-gray-900">
                 {technicalPortfolio.title}
               </h3>
-              <p className="text-gray-600 mb-6">
-                Click to view my complete technical portfolio including projects, skills, and achievements.
-              </p>
               <a 
                 href={technicalPortfolio.pdfUrl}
                 target="_blank"
@@ -482,7 +479,7 @@ const FashionPortfolio = () => {
           </h2>
           
           {/* Contact Information */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="flex flex-col items-center">
               <Mail className="w-8 h-8 mb-4 text-gray-900" />
               <h3 className="font-semibold mb-2">Email</h3>
