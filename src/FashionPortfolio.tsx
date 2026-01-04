@@ -504,7 +504,7 @@ const FashionPortfolio = () => {
           </div>
           
           {/* Contact Form */}
-          <div className="max-w-xl mx-auto">
+          {/* <div className="max-w-xl mx-auto">
             <div className="space-y-4">
               <input 
                 type="text"
@@ -537,7 +537,7 @@ const FashionPortfolio = () => {
                 {formSubmitted ? 'Message Sent!' : 'Send Message'}
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
