@@ -63,6 +63,29 @@ const technicalPortfolio =
     thumbnailImage: 'Tech.jpg'
   };
 
+const researchPapers = [
+  {
+    id: 1,
+    title: 'Your First Research Paper Title',
+    authors: 'Your Name, Co-Author Name', // Optional
+    journal: 'Journal/Conference Name', // Optional
+    year: '2024',
+    abstract: 'This is the abstract of your first research paper. Describe the problem you addressed, methodology used, key findings, and conclusions. This should be a concise summary of your research work typically 150-250 words.',
+    pdfUrl: 'YOUR_PAPER_1_PDF_LINK', // Replace with actual PDF link
+    keywords: ['Machine Learning', 'AI', 'Research'] // Optional
+  },
+  {
+    id: 2,
+    title: 'Your Second Research Paper Title',
+    authors: 'Your Name, Co-Author Name',
+    journal: 'Journal/Conference Name',
+    year: '2023',
+    abstract: 'This is the abstract of your second research paper. Include the research objectives, methods employed, significant results obtained, and the impact of your work. Keep it clear and comprehensive.',
+    pdfUrl: 'YOUR_PAPER_2_PDF_LINK', // Replace with actual PDF link
+    keywords: ['Deep Learning', 'Computer Vision', 'Innovation']
+  }
+];
+
 const FashionPortfolio = () => {
   // State for mobile menu toggle
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -157,6 +180,9 @@ const FashionPortfolio = () => {
               <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-gray-900 transition">
                 Contact
               </button>
+              <button onClick={() => scrollToSection('research')} className="text-gray-700 hover:text-gray-900 transition">
+                Research
+              </button>
             </div>
             
             {/* Mobile Menu Button */}
@@ -181,6 +207,9 @@ const FashionPortfolio = () => {
               </button>
               <button onClick={() => scrollToSection('tportfolio')} className="block w-full text-left py-2 text-gray-700">
                 Technical Portfolio
+              </button>
+              <button onClick={() => scrollToSection('research')} className="block w-full text-left py-2 text-gray-700">
+                Research
               </button>
               <button onClick={() => scrollToSection('about')} className="block w-full text-left py-2 text-gray-700">
                 About
@@ -264,7 +293,7 @@ const FashionPortfolio = () => {
       </section>
 
       {/* Technical Portfolio Section */}
-      <section id="tportfolio" className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-50">
+      <section id="tportfolio" className="py-20 px-4 bg-gradient-to-br from-rose-50 to-amber-50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-serif text-center mb-4 text-gray-900">
             Technical Portfolio
@@ -315,6 +344,93 @@ const FashionPortfolio = () => {
                 Open PDF →
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Research Section */}
+      <section id="research" className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-serif text-center mb-4 text-gray-900">
+            My Research
+          </h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            Published research papers and academic contributions
+          </p>
+          
+          {/* Research Papers Grid */}
+          <div className="space-y-8">
+            {researchPapers.map(paper => (
+              <div 
+                key={paper.id}
+                className="bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-gray-400 hover:shadow-xl transition-all duration-300"
+              >
+                {/* Paper Header */}
+                <div className="mb-6">
+                  <h3 className="text-2xl md:text-3xl font-serif text-gray-900 mb-3">
+                    {paper.title}
+                  </h3>
+                  
+                  {/* Metadata */}
+                  <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-2">
+                    {paper.authors && (
+                      <span className="flex items-center">
+                        <strong className="mr-2">Authors:</strong> {paper.authors}
+                      </span>
+                    )}
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+                    {paper.journal && (
+                      <span className="flex items-center">
+                        <strong className="mr-2">Published in:</strong> {paper.journal}
+                      </span>
+                    )}
+                    {paper.year && (
+                      <span className="flex items-center">
+                        <strong className="mr-2">Year:</strong> {paper.year}
+                      </span>
+                    )}
+                  </div>
+                </div>
+                
+                {/* Abstract */}
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Abstract</h4>
+                  <p className="text-gray-700 leading-relaxed text-justify">
+                    {paper.abstract}
+                  </p>
+                </div>
+                
+                {/* Keywords */}
+                {paper.keywords && paper.keywords.length > 0 && (
+                  <div className="mb-6">
+                    <div className="flex flex-wrap gap-2">
+                      {paper.keywords.map((keyword, index) => (
+                        <span 
+                          key={index}
+                          className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                        >
+                          {keyword}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {/* Action Button */}
+                <div className="flex gap-4">
+                  <a 
+                    href={paper.pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition font-medium"
+                  >
+                    Read Full Paper →
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
