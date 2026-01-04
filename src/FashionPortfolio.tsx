@@ -23,35 +23,40 @@ const portfolioItems = [
     title: '',
     category: 'Mangala Malar',
     image: 'Mangala malar.jpg',
-    description: 'Divinity Woven for Today'
+    description: 'Divinity Woven for Today',
+    pdfUrl: '/MM.pdf'
   },
   {
     id: 2,
     title: '',
     category: 'Handcrafted Narratives',
     image: 'Handcrafted narratives .jpg',
-    description: 'An Indian Dialogue with Wedgewood'
+    description: 'An Indian Dialogue with Wedgewood',
+    pdfUrl: '/HN.pdf'
   },
   {
     id: 3,
     title: '',
     category: 'Theera Kadhal',
     image: 'Theera kadhal.jpg',
-    description: 'An Infinite Bond Beautifully Worn'
+    description: 'An Infinite Bond Beautifully Worn',
+    pdfUrl: '/TK.pdf'
   },
   {
     id: 4,
     title: '',
     category: 'Thari',
     image: 'Thari.jpg',
-    description: 'Crafted in tradition designed for Today'
+    description: 'Crafted in tradition designed for Today',
+    pdfUrl: '/TH.pdf'
   },
   {
     id: 5,
     title: '',
     category: 'JADE',
     image: 'Jade.jpg',
-    description: 'Hospitality Draped in Heritage'
+    description: 'Hospitality Draped in Heritage',
+    pdfUrl: '/JADE.pdf'
   }
 ];
 
@@ -66,23 +71,23 @@ const technicalPortfolio =
 const researchPapers = [
   {
     id: 1,
-    title: 'Your First Research Paper Title',
-    authors: 'Your Name, Co-Author Name', // Optional
-    journal: 'Journal/Conference Name', // Optional
-    year: '2024',
-    abstract: 'This is the abstract of your first research paper. Describe the problem you addressed, methodology used, key findings, and conclusions. This should be a concise summary of your research work typically 150-250 words.',
-    pdfUrl: 'YOUR_PAPER_1_PDF_LINK', // Replace with actual PDF link
-    keywords: ['Machine Learning', 'AI', 'Research'] // Optional
+    title: 'A Sustainable Global Strategy for Gizia: Local Artisan Partnerships (Conceptual)',
+    authors: 'Logitha Varshini Ramesh', 
+    journal: '-', // Optional
+    year: '-',
+    abstract: 'This conceptual research article evaluates the sustainability practices of Gizia, a Turkish luxury fashion brand, in relation to global sustainability challenges. Using secondary data and strategic frameworks, it proposes a sustainable global strategy based on local artisan partnerships to enhance ethical production, cultural preservation, and inclusive growth, aligned with the United Nations Sustainable Development Goals.',
+    pdfUrl: '/Gizia.pdf', // Replace with actual PDF link
+    keywords: ['Sustainable Fashion', 'SDGs', 'Ethical Production', 'Artisan Collaboration']
   },
   {
     id: 2,
-    title: 'Your Second Research Paper Title',
-    authors: 'Your Name, Co-Author Name',
-    journal: 'Journal/Conference Name',
-    year: '2023',
-    abstract: 'This is the abstract of your second research paper. Include the research objectives, methods employed, significant results obtained, and the impact of your work. Keep it clear and comprehensive.',
-    pdfUrl: 'YOUR_PAPER_2_PDF_LINK', // Replace with actual PDF link
-    keywords: ['Deep Learning', 'Computer Vision', 'Innovation']
+    title: 'Development Of Multifunctional Homedecor Products Using Terracotta',
+    authors: 'Logitha Varshini Ramesh, Nirmala Varghese, Sally Moll',
+    journal: 'Journal of Emerging Technologies and Innovative Research (JETIR)',
+    year: '2024',
+    abstract: 'Terracotta is an age-old craft that continues to evolve through innovation. This project explores the development of sustainable, eco-friendly, and low-cost terracotta products using conventional craft techniques. By adapting traditional methods, three multifunctional terracotta planters were designed, demonstrating how heritage craftsmanship can be innovatively applied to contemporary product design.',
+    pdfUrl: '/Terracota.pdf', // Replace with actual PDF link
+    keywords: ['Terracota', 'Sustainable', 'Eco-friendly', 'Planters', 'Multifunctional']
   }
 ];
 
@@ -174,15 +179,16 @@ const FashionPortfolio = () => {
               <button onClick={() => scrollToSection('tportfolio')} className="text-gray-700 hover:text-gray-900 transition">
                 Technical Portfolio
               </button>
+              <button onClick={() => scrollToSection('research')} className="text-gray-700 hover:text-gray-900 transition">
+                Research
+              </button>
               <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-gray-900 transition">
                 About
               </button>
               <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-gray-900 transition">
                 Contact
               </button>
-              <button onClick={() => scrollToSection('research')} className="text-gray-700 hover:text-gray-900 transition">
-                Research
-              </button>
+              
             </div>
             
             {/* Mobile Menu Button */}
@@ -270,6 +276,11 @@ const FashionPortfolio = () => {
             {filteredItems.map(item => (
               <div 
                 key={item.id}
+                onClick={() => {
+                  if (item.pdfUrl) {
+                    window.open(item.pdfUrl, '_blank');
+                  }
+                }}
                 className="group cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300"
               >
                 <div className="relative overflow-hidden aspect-[4/5]">
