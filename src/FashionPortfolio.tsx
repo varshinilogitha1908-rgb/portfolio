@@ -480,33 +480,30 @@ const FashionPortfolio = () => {
           <h2 className="text-4xl md:text-5xl font-serif mb-6 text-gray-900">
             Get in Touch
           </h2>
-          <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
-            Let's create something beautiful together. Reach out for consultations, custom orders, or collaborations.
-          </p>
           
           {/* Contact Information */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="flex flex-col items-center">
               <Mail className="w-8 h-8 mb-4 text-gray-900" />
               <h3 className="font-semibold mb-2">Email</h3>
-              <a href="mailto:info@designer.com" className="text-gray-600 hover:text-gray-900">
-                info@designer.com
+              <a href="mailto:logithavarshiniramesh@gmail.com" className="text-gray-600 hover:text-gray-900">
+                logithavarshiniramesh@gmail.com
               </a>
             </div>
             <div className="flex flex-col items-center">
               <Phone className="w-8 h-8 mb-4 text-gray-900" />
               <h3 className="font-semibold mb-2">Phone</h3>
-              <a href="tel:+1234567890" className="text-gray-600 hover:text-gray-900">
-                +1 (234) 567-890
+              <a href="tel:+447909473700" className="text-gray-600 hover:text-gray-900">
+                +44 7909473700
               </a>
             </div>
-            <div className="flex flex-col items-center">
+            {/* <div className="flex flex-col items-center">
               <Instagram className="w-8 h-8 mb-4 text-gray-900" />
               <h3 className="font-semibold mb-2">Instagram</h3>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
                 @designername
               </a>
-            </div>
+            </div> */}
           </div>
           
           {/* Contact Form */}
