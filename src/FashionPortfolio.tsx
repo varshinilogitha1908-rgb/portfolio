@@ -86,8 +86,8 @@ const researchPapers = [
     journal: 'Journal of Emerging Technologies and Innovative Research (JETIR)',
     year: '2024',
     abstract: 'Terracotta is an age-old craft that continues to evolve through innovation. This project explores the development of sustainable, eco-friendly, and low-cost terracotta products using conventional craft techniques. By adapting traditional methods, three multifunctional terracotta planters were designed, demonstrating how heritage craftsmanship can be innovatively applied to contemporary product design.',
-    pdfUrl: '/Terracota.pdf', // Replace with actual PDF link
-    keywords: ['Terracota', 'Sustainable', 'Eco-friendly', 'Planters', 'Multifunctional']
+    pdfUrl: '/Terracotta.pdf', // Replace with actual PDF link
+    keywords: ['Terracotta', 'Sustainable', 'Eco-friendly', 'Planters', 'Multifunctional']
   }
 ];
 
@@ -455,20 +455,17 @@ const FashionPortfolio = () => {
                 About the Designer
               </h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                With over a decade of experience in fashion design, our designer combines traditional craftsmanship with contemporary aesthetics to create unique pieces that tell a story.
+                I am a fashion design graduate with a strong CAD-driven approach, specialising in Adobe Illustrator and Photoshop for garment illustrations, technical drawings, prints, and production-ready artwork. My design process is rooted in research, translating trends, colour stories, and concepts into clear, commercially aware designs supported by accurate tech packs and visual communication.
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Each collection is thoughtfully curated, drawing inspiration from heritage textiles, modern art, and the natural world. We believe in sustainable fashion that celebrates individuality and timeless elegance.
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                Our atelier specializes in bespoke bridal wear, contemporary ethnic fashion, and luxury ready-to-wear collections that blend tradition with innovation.
+                Deeply influenced by sustainability and craft-led practices, I value thoughtful design, material sensitivity, and attention to detail. I enjoy working in fast-paced, collaborative environments where creativity meets structure, and I bring curiosity, adaptability, and a strong work ethic to every stage of the design and development process.
               </p>
             </div>
             <div className="relative">
               <div className="aspect-square rounded-lg overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1558769132-cb1aea1f1b8c?w=800&h=800&fit=crop" 
-                  alt="Designer"
+                  src="/Logitha.JPG" 
+                  alt="Logitha Varshini Ramesh"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -554,7 +551,7 @@ const FashionPortfolio = () => {
       <footer className="bg-gray-900 text-white py-8 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-gray-400">
-            © 2024 Designer Name. All rights reserved.
+            © 2024 Designer Name: Pradeep Murugesan (email: pradeep71195@gmail.com). All rights reserved.
           </p>
         </div>
       </footer>
